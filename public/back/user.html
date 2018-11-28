@@ -46,7 +46,33 @@
         <a href="#" class="icon_right pull-right"><i class="glyphicon glyphicon-log-out"></i></a>
     </div>
       <!-- 底下一个流式布局容器 container-fluid  特点: 默认宽度100%, 有左右的15px padding -->
-      <div class="container-fluid"></div>
+      <div class="container-fluid">
+        <!-- 面包屑导航【路径导航】 -->
+        <ol class="breadcrumb mt-20">
+            <li><a href="index.html">管理系统</a></li>
+            <li class="active"><a href="#"></a>用户管理</a></li>
+        </ol> 
+        <table class="table table-bordered table-hover">
+            <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>用户名</th>
+                    <th>手机号</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>jin</td>
+                    <td>13166956119</td>
+                    <td>正常</td>
+                    <td><button class="btn btn-danger">禁用</button></td>
+                </tr>
+            </tbody>
+        </table>
+      </div>
 </div>
 
 
