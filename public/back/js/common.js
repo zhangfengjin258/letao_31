@@ -22,6 +22,8 @@
 // .ajaxStart()        在第一个ajax请求开始是调用
 // .ajaxStop()         在所有ajax请求都完成时调用
 
+
+// 进度条不放在入口函数中的意义在于，进度条是页面开机就要开启的，不需要等整个页面加载完再执行
 $(document).ajaxStart( function () {
     // 开启进度条
     NProgress.start();
@@ -30,6 +32,19 @@ $(document).ajaxStop( function () {
     // 关闭进度条
     NProgress.done();
 } )
+
+
+// 公共部分放在commom.js中，方便整体调用
+$(function(){
+    // 公共部分
+    // 1、左侧二级菜单切换
+    $('.category').click(function(){
+        // stop()阻止动画
+        $(this).next().stop().slideToggle();
+    })
+    // 2、左侧侧边栏切换
+    
+})
 
 
 
