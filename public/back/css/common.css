@@ -1,3 +1,18 @@
+a:link,
+a:visited,
+a:hover,
+a:active{
+    text-decoration: none;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+
+
 .body_bg {
 background-color: #222D32;
 }
@@ -27,6 +42,8 @@ background-color: #222D32;
     font-size:26px;
     color: #fff;
 }
+
+
 .lt_aside .user {
     padding-top: 30px;
 }
@@ -45,5 +62,36 @@ background-color: #222D32;
     line-height: 50px;
     color: #fff;
     font-size: 18px;
-
+    user-select: none;
 }
+
+
+
+.lt-aside .nav{
+    width: 100%;
+}
+.lt_aside .nav li a{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    /* 在这里不适用text-align设置居中使用padding，方便二级菜单设置样式 */
+    /* text-align: center; */
+    padding-left: 40px;
+    color: #fff;
+    border-left: 3px solid transparent;
+}
+.lt_aside .nav li a.active{
+    background-color: #1D1F21;
+    border-left:3px solid #367FA9;
+}
+.lt_aside .nav .child{
+    display: none;
+}
+.lt_aside .nav .child a{
+    padding-left: 60px;
+}
+.lt_aside .nav li i{
+    padding-right: 5px;
+}
+
+
