@@ -205,6 +205,8 @@ $(function() {
   });
 
 
+
+  
   // 6. 注册一个表单校验成功事件, 阻止默认的提交, 通过ajax提交
   $('#form').on("success.form.bv", function( e ) {
     e.preventDefault();
