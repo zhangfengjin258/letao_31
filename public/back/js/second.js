@@ -128,5 +128,30 @@ $(function () {
           }
         }
       })
+    //   6、注册表单校验成功事件，阻止默认表单提交，通过ajax提交
+    $('#form').on('success.form.bv',function( e ) {
+        // 阻止表单自动提交
+        e.preventDefault();
+        $.ajax({
+            type: "post",
+            url: "/category/addSecondCategory",
+            data: $('#form').serialize(),
+            dataType: "json",
+            success: function ( info ) {
+                // console.log( info );
+                // 关闭模态框
+               if( info.success ) {
+                $('#addModal').modal('hide');
+                currentPage = 1;
+                render();
 
+                // 重置表单内容与状态
+                $('#form').data('bootstrapValidator').resetForm(true);
+                // 由于下拉菜单与图片不是表单元素，需要手动重置
+                $('#dropdownText').text('请选择一级分类');
+                $('#imgBox img').attr('src',"./images/default.png");
+               }
+            }
+        });
+    })
 })
