@@ -9,16 +9,16 @@
   <link rel="stylesheet" href="./lib/mui/css/mui.css">
   <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
   <link rel="stylesheet" href="./css/common.css">
-  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="./css/searchList.css">
 </head>
 <body>
 
 <!-- 由于内部盒子需要实现区域滚动, 所以外层是一个全屏容器 -->
 <div class="lt_container">
   <div class="lt_header">
-    <a href="index.html" class="icon_left"><i class="fa fa-home"></i></a>
-    <h3>乐淘云购</h3>
-    <a href="search.html" class="icon_right"><i class="fa fa-search"></i></a>
+    <!-- history.go(-1)  history.back(); 返回上一页 -->
+    <a href="javascript: history.go(-1);" class="icon_left"><i class="mui-icon mui-icon-back"></i></a>
+    <h3>搜索中心</h3>
   </div>
 
 
@@ -27,46 +27,19 @@
       <div class="mui-scroll">
         <!--这里放置真实显示的DOM内容-->
 
-        <!-- 轮播图区域 -->
-        <div class="mui-slider">
-          <div class="mui-slider-group mui-slider-loop">
-            <!-- 添加假图片 -->
-            <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="./images/banner6.png" /></a></div>
-
-            <div class="mui-slider-item"><a href="#"><img src="./images/banner1.png" /></a></div>
-            <div class="mui-slider-item"><a href="#"><img src="./images/banner2.png" /></a></div>
-            <div class="mui-slider-item"><a href="#"><img src="./images/banner3.png" /></a></div>
-            <div class="mui-slider-item"><a href="#"><img src="./images/banner4.png" /></a></div>
-            <div class="mui-slider-item"><a href="#"><img src="./images/banner5.png" /></a></div>
-            <div class="mui-slider-item"><a href="#"><img src="./images/banner6.png" /></a></div>
-
-            <!-- 添加假图片 -->
-            <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="./images/banner1.png" /></a></div>
-          </div>
-
-          <!-- 小圆点 -->
-          <div class="mui-slider-indicator">
-            <div class="mui-indicator mui-active"></div>
-            <div class="mui-indicator"></div>
-            <div class="mui-indicator"></div>
-            <div class="mui-indicator"></div>
-            <div class="mui-indicator"></div>
-            <div class="mui-indicator"></div>
-          </div>
+        <!-- 搜索框 -->
+        <div class="lt_search">
+          <input type="text" placeholder="请输入搜索关键字" class="search_input">
+          <button class="mui-btn mui-btn-primary search_btn">搜索</button>
         </div>
 
-        <!-- 导航区域 -->
-        <div class="lt_nav">
-          <ul class="mui-clearfix">
-            <li><a href="#"><img src="./images/nav1.png" alt=""></a></li>
-            <li><a href="#"><img src="./images/nav2.png" alt=""></a></li>
-            <li><a href="#"><img src="./images/nav3.png" alt=""></a></li>
-            <li><a href="#"><img src="./images/nav4.png" alt=""></a></li>
-            <li><a href="#"><img src="./images/nav5.png" alt=""></a></li>
-            <li><a href="#"><img src="./images/nav6.png" alt=""></a></li>
-          </ul>
+        <!-- 乐淘排序 -->
+        <div class="lt_sort">
+          <a href="#"><span>上架时间</span><i class="fa fa-angle-down"></i></a>
+          <a href="#"><span>价格</span><i class="fa fa-angle-down"></i></a>
+          <a href="#"><span>库存</span><i class="fa fa-angle-down"></i></a>
+          <a href="#"><span>折扣</span><i class="fa fa-angle-down"></i></a>
         </div>
-
 
         <!-- 产品区域 -->
         <div class="lt_product">
@@ -118,6 +91,7 @@
           </ul>
         </div>
 
+
       </div>
     </div>
   </div>
@@ -126,7 +100,7 @@
   <div class="lt_footer">
     <ul>
       <li>
-        <a href="index.html" class="current">
+        <a href="index.html">
           <i class="fa fa-home"></i>
           <p>首页</p>
         </a>
@@ -155,6 +129,9 @@
 
 
 <script src="./lib/mui/js/mui.js"></script>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
 <script src="./js/common.js"></script>
+<script src="./js/searchList.js"></script>
 </body>
 </html>
