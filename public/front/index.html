@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 设置视口 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0,maximum=1.0,minimum=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- 引入网站图标 -->
+    <link rel="icon" href="./favicon.ico">
+    <!-- 引入字体图标css包 -->
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <!-- 引入MUI css包 -->
+    <link rel="stylesheet" href="./lib/mui/css/mui.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <title>乐淘商城</title>
+</head>
+<body>
+    <!-- 盒子要实现区域滚动，故外面需要一个盒子包裹 -->
+    <div class="lt_container">
+        <div class="lt_header">
+            <div class="head_left">
+                <a href="#"><i class="fa fa-home"></i></a>
+            </div>
+            <div class="head_title">
+                <h3>乐淘云购</h3>
+            </div>
+            <div class="head_right">
+                <a href="#"><i class="fa fa-search"></i></a>
+            </div>
+        </div>
+        <div class="lt_content">
+            <div class="mui-scroll-wrapper">
+                <div class="mui-scroll">
+                    <!--这里放置真实显示的DOM内容-->
+                    <div class="mui-slider">
+                        <div class="mui-slider-group  mui-slider-loop">
+                            <!-- 假图片 -->
+                          <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="./images/banner6.png" /></a></div>
+                          <div class="mui-slider-item"><a href="#"><img src="./images/banner1.png" /></a></div>
+                          <div class="mui-slider-item"><a href="#"><img src="./images/banner2.png" /></a></div>
+                          <div class="mui-slider-item"><a href="#"><img src="./images/banner3.png" /></a></div>
+                          <div class="mui-slider-item"><a href="#"><img src="./images/banner4.png" /></a></div>
+                          <div class="mui-slider-item"><a href="#"><img src="./images/banner5.png" /></a></div>
+                          <div class="mui-slider-item"><a href="#"><img src="./images/banner6.png" /></a></div>
+                          <!-- 假图片 -->
+                          <div class="mui-slider-item mui-slider-item-duplicate"><a href="#"><img src="./images/banner1.png" /></a></div>
+
+                        </div>
+                        <!-- 小圆点 -->
+                        <div class="mui-slider-indicator">
+                                <div class="mui-indicator mui-active"></div>
+                                <div class="mui-indicator"></div>
+                                <div class="mui-indicator"></div>
+                                <div class="mui-indicator"></div>
+                                <div class="mui-indicator"></div>
+                                <div class="mui-indicator"></div>
+                            </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+        <div class="lt_footer">
+            <ul>
+                <li><a href="index.html"><i class="fa fa-home"></i><p>首页</p></a></li>
+                <li><a href="category.html"><i class="fa fa-bars"></i><p>分类页</p></a></li>
+                <li><a href="cart.html"><i class="fa fa-shopping-cart"></i><p>购物车</p></a></li>
+                <li><a href="user.html"><i class="fa fa-user"></i><p>用户中心</p></a></li>
+            </ul>
+        </div>
+    </div>
+
+
+<!-- 引入MUI的js文件 -->
+ <script src="./lib/mui/js/mui.js"></script> 
+ <script src="./js/common.js"></script>  
+</body>
+</html>
